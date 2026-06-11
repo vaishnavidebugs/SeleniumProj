@@ -14,7 +14,6 @@ public class Assignment_PageSignup {
         driver.manage().window().maximize();
         String title = driver.getTitle();
         System.out.println("Page title is : " + title);
-        Thread.sleep(2000);
 
         //userdata
         String userName = "Vaishnavi";
@@ -34,7 +33,6 @@ public class Assignment_PageSignup {
         //To click the signup link
         WebElement signUpLink = driver.findElement(By.xpath("//i[contains(@class,'lock')]//parent::a"));
         signUpLink.click();
-        Thread.sleep(2000);
 
         //Verify the login/signup page is displayed
         WebElement titleDisplay = driver.findElement(By.xpath("//h2[text()='Login to your account']"));
@@ -137,7 +135,6 @@ public class Assignment_PageSignup {
         WebElement createAccountBtn = driver.findElement(By.xpath("//button[contains(text(),'Create Account')]"));
         createAccountBtn.click();
         System.out.println("Successfully created the user account!");
-        Thread.sleep(2000);
 
         //verify the message
         WebElement successMsg1 = driver.findElement(By.xpath("//b[contains(text(),'Account Created!')]"));
@@ -151,7 +148,6 @@ public class Assignment_PageSignup {
         System.out.println(successMsg3Txt);
         WebElement continueBtn = driver.findElement(By.xpath("//a[text()='Continue']"));
         continueBtn.click();
-        Thread.sleep(3000);
 
         //verify username
         WebElement userNameVerification = driver.findElement(By.xpath("//i[@class='fa fa-user']//following-sibling::b"));
